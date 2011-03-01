@@ -8,9 +8,9 @@
   </parent>
   
   <groupId>org.jvnet.hudson.plugins</groupId>
-  <artifactId>integrity</artifactId>
+  <artifactId>integrity-plugin</artifactId>
   <name>MKS Integrity CM - Hudson Plugin</name>
-  <version>1.2</version>
+  <version>1.2-SNAPSHOT</version>
   <packaging>hpi</packaging>
 
   <url>http://wiki.hudson-ci.org/display/HUDSON/MKS+Integrity+Plugin</url>
@@ -24,8 +24,8 @@
   </developers>
 
   <scm>
-	<connection>scm:git:git://github.com/hudson-plugins/MKS-Integrity-Plugin.git</connection>
-	<developerConnection>scm:git:git@github.com:hudson-plugins/MKS-Integrity-Plugin.git</developerConnection>
+	<connection>scm:git:ssh://github.com/hudson-plugins/MKS-Integrity-Plugin.git</connection>
+	<developerConnection>scm:git:ssh://git@github.com/hudson-plugins/MKS-Integrity-Plugin.git</developerConnection>
 	<url>https://github.com/hudson-plugins/MKS-Integrity-Plugin</url>
   </scm>
   
