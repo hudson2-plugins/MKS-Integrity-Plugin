@@ -4,24 +4,38 @@
   <parent>
     <groupId>org.jvnet.hudson.plugins</groupId>
     <artifactId>plugin</artifactId>
-	<!-- which version of Hudson is this plugin built against? -->	
-    <version>1.385</version>
+    <version>1.395</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
   
+  <groupId>org.jvnet.hudson.plugins.mks-integrity-plugin</groupId>
   <artifactId>integrity</artifactId>
   <name>MKS Integrity CM - Hudson Plugin</name>
-  <version>1.2</version>
+  <version>1.2-SNAPSHOT</version>
   <packaging>hpi</packaging>
 
   <url>http://wiki.hudson-ci.org/display/HUDSON/MKS+Integrity+Plugin</url>
 
+  <developers>
+    <developer>
+      <id>cdsouza</id>
+      <name>Cletus D'Souza</name>
+      <email>Cletus.D'Souza@mks.com</email>
+    </developer>
+  </developers>
+
+  <scm>
+	<connection>scm:git:git://github.com/hudson-plugins/MKS-Integrity-Plugin.git</connection>
+	<developerConnection>scm:git:git@github.com:hudson-plugins/MKS-Integrity-Plugin.git</developerConnection>
+	<url>https://github.com/hudson-plugins/MKS-Integrity-Plugin</url>
+  </scm>
+  
   <dependencies>
    	<dependency>
   		<groupId>com.mks.api</groupId>
   		<artifactId>mksapi-jar</artifactId>
   		<version>4.10.5799</version>
-  		<scope>runtime</scope>
+  		<scope>compile</scope>
    	</dependency>
   </dependencies>
   <dependencyManagement>
@@ -31,6 +45,19 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
+  <distributionManagement>
+	<snapshotRepository>
+		<id>sonatype-nexus-snapshots</id>
+		<name>Sonatype Nexus Snapshots</name>
+		<url>${sonatypeOssDistMgmtSnapshotsUrl}</url>
+	</snapshotRepository>
+	<repository>
+		<id>sonatype-nexus-staging</id>
+		<name>Nexus Release Repository</name>
+		<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+	</repository>
+  </distributionManagement>
 
   <build>
     <plugins>
