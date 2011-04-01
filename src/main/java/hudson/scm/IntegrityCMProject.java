@@ -155,10 +155,11 @@ public class IntegrityCMProject implements Serializable
 	/**
 	 * Parses the output from the si viewproject command to get a list of members
 	 * @param wit WorkItemIterator
+	 * @param api The current MKS API Session
 	 * @throws APIException
 	 * @return The list of IntegrityCMMember objects for this project 
 	 */
-	public void parseProject(WorkItemIterator wit) throws APIException
+	public void parseProject(WorkItemIterator wit, APISession api) throws APIException
 	{
 		// Re-initialize the member list for this project
 		memberList = new ArrayList<IntegrityCMMember>();
@@ -183,14 +184,14 @@ public class IntegrityCMProject implements Serializable
 				// Figure out this member's parent project's canonical path name
 				String parentProject = wi.getField("parent").getValueAsString();
 				// Instantiate our Integrity CM Member object
-				IntegrityCMMember iCMMember = new IntegrityCMMember(wi, pjConfigHash.get(parentProject), projectRoot);
+				IntegrityCMMember iCMMember = new IntegrityCMMember(wi, pjConfigHash.get(parentProject), projectRoot, api);
 				// Set the line terminator for this file
 				iCMMember.setLineTerminator(lineTerminator);
 				// Set the restore timestamp option when checking out this file
 				iCMMember.setRestoreTimestamp(restoreTimestamp);
 				// Add this to the full list of members in this project
 				memberList.add(iCMMember);
-			}			
+			}
 			else
 			{
 				logger.warn("View project output contains an invalid model type: " + wi.getModelType());
@@ -307,7 +308,7 @@ public class IntegrityCMProject implements Serializable
 	{
 		// Write out the other details about the member...
 		writeChangeLog(String.format("\t\t\t<file>%s</file>", iMember.getMemberName()));
-		writeChangeLog(String.format("\t\t\t<user>%s</user>", iMember.getAuthor(api)));							
+		writeChangeLog(String.format("\t\t\t<user>%s</user>", iMember.getAuthor()));							
 		writeChangeLog(String.format("\t\t\t<revision>%s</revision>", iMember.getRevision()));						    
 		writeChangeLog(String.format("\t\t\t<date>%s</date>", IntegritySCM.SDF.format(iMember.getTimestamp())));
 		try
