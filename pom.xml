@@ -9,7 +9,7 @@
   <groupId>org.jvnet.hudson.plugins</groupId>
   <artifactId>integrity-plugin</artifactId>
   <name>MKS Integrity CM - Hudson Plugin</name>
-  <version>1.4</version>
+  <version>1.5-SNAPSHOT</version>
   <packaging>hpi</packaging>
 
   <url>http://wiki.hudson-ci.org/display/HUDSON/MKS+Integrity+Plugin</url>
