@@ -9,7 +9,7 @@
   <groupId>org.jvnet.hudson.plugins</groupId>
   <artifactId>integrity-plugin</artifactId>
   <name>PTC Integrity CM - Hudson Plugin</name>
-  <version>1.11-SNAPSHOT</version>
+  <version>1.11</version>
   <packaging>hpi</packaging>
 
   <url>http://wiki.hudson-ci.org/display/HUDSON/PTC+Integrity+Plugin</url>
