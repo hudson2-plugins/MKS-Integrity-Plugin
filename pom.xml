@@ -10,7 +10,7 @@
   <groupId>org.jvnet.hudson.plugins</groupId>
   <artifactId>integrity-plugin</artifactId>
   <name>PTC Integrity CM - Hudson Plugin</name>
-  <version>1.13-SNAPSHOT</version>
+  <version>1.12-SNAPSHOT</version>
   <packaging>hpi</packaging>
 
   <url>http://wiki.hudson-ci.org/display/HUDSON/PTC+Integrity+Plugin</url>
@@ -25,7 +25,8 @@
 
   <scm>
 	<connection>scm:git:ssh://github.com/hudson-plugins/MKS-Integrity-Plugin.git</connection>
-	<developerConnection>scm:git:ssh://git@github.com/hudson-plugins/MKS-Integrity-Plugin.git</developerConnection>
+	<!--<developerConnection>scm:git:ssh://git@github.com/hudson-plugins/MKS-Integrity-Plugin.git</developerConnection>-->
+	<developerConnection>scm:git:fetch=file://c:/Users/cdsouza/Documents/MKS/Sandboxes/FDO/utilities/SI_Hudsonlugin/Implementation/Hudson-Git-Release/MKS-Integrity-Plugin:push=ssh://git@github.com/hudson-plugins/MKS-Integrity-Plugin.git</developerConnection>
 	<url>https://github.com/hudson-plugins/MKS-Integrity-Plugin</url>
   </scm>
   
